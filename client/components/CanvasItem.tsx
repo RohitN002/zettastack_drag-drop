@@ -42,14 +42,36 @@ export default function CanvasItem({ item }: Props) {
           }),
         );
       }}
-      className="border bg-blue-600 flex items-center justify-center"
+      className="
+    relative
+    bg-white
+    border border-gray-300
+    rounded-md
+    shadow-sm
+    hover:shadow-md
+    transition-shadow
+    flex items-center justify-center
+    text-sm font-medium text-gray-700
+  "
     >
       {item.type}
+
       <button
         onClick={() => dispatch(deleteItem(item.id))}
-        className="absolute top-0 right-0 text-xs bg-black text-white p-1"
+        className="
+      absolute top-1 right-1
+      w-5 h-5
+      rounded
+      bg-gray-200
+      text-gray-600
+      text-xs
+      flex items-center justify-center
+      hover:bg-red-500
+      hover:text-white
+      transition-colors
+    "
       >
-        X
+        x
       </button>
     </Rnd>
   );

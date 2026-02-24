@@ -23,7 +23,6 @@ const slice = createSlice({
   reducers: {
     bringToFront: (state, action: PayloadAction<string>) => {
       const item = state.present.find((i) => i.id === action.payload);
-      console.log("bring to front", JSON.stringify(item));
       if (!item) return;
 
       state.maxZIndex += 1;

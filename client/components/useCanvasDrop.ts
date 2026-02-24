@@ -34,7 +34,7 @@ export function useCanvasDrop(items: CanvasItem[], dispatch: Dispatch) {
 
     const overlappingCount = isOverlapping(x, y, DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-    if (overlappingCount >= 5) {
+    if (overlappingCount + 1 >= 5) {
       toast.error("Maximum 5 elements allowed in the same area");
       return;
     }
